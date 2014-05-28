@@ -282,7 +282,6 @@ class WritableField(Field):
         if required is None:
             self.required = not(read_only)
         else:
-            assert not (read_only and required), "Cannot set required=True and read_only=True"
             self.required = required
 
         messages = {}

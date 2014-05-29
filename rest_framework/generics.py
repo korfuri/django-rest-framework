@@ -276,6 +276,7 @@ class GenericAPIView(views.APIView):
         serializer_class = self.serializer_class_for_output
         if serializer_class is None:
             return self.get_serializer_class()
+        return serializer_class
 
     def get_queryset(self):
         """

@@ -187,7 +187,7 @@ class Field(object):
 
     def field_to_native(self, obj, field_name):
         """
-        Given and object and a field name, returns the value that should be
+        Given an object and a field name, returns the value that should be
         serialized for that field.
         """
         if obj is None:
@@ -505,7 +505,7 @@ class SlugField(CharField):
 
 class ChoiceField(WritableField):
     type_name = 'ChoiceField'
-    type_label = 'multiple choice'
+    type_label = 'choice'
     form_field_class = forms.ChoiceField
     widget = widgets.Select
     default_error_messages = {
